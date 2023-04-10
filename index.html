@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Photosynthesis (with bad drawings)</title>
+        
+        <!-- Libraries -->
+        <script src="lib/anime.min.js" defer></script>
+        <script src="lib/jquery-3.6.1.min.js" defer></script>
+        <link rel="stylesheet" href="lib/jquery-ui.min.css" defer>
+        <script src="lib/jquery-ui.min.js" defer></script>
+        <!-- Script and Styling -->
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="frame" id="frame" style="z-index: 101">
+                <!-- Scene 1: Title Card -->
+                
+                
+            </div>
+            <div class="block block-left">
+
+            </div>
+            <div class="block block-right">
+
+            </div>
+            <div class="block block-top" style="z-index: 100;">
+
+            </div>
+            <div class="block block-bottom">
+
+            </div>
+            <div class="block block-tr"></div>
+            <div class="block block-br"></div>
+            <div class="block block-tl"></div>
+            <div class="block block-bl"></div>
+            <div class="checkpoints">
+                <p class="nav-text">Jump to a Section:</p>
+                <div class="images-container">
+                    <img class="nav-img" src="assets/titlecard.png" onclick="fadeout()" />
+                    <img class="nav-img" src="assets/carrot.png" onclick="scene2_2()"/>
+                    <img class="nav-img" src="assets/leaf-diagram_1.png" onclick="scene3_1()" />
+                    <img class="nav-img" src="assets/close-stoma.png" onclick="closeStoma()" />
+                    <img class="nav-img" src="assets/chloroplast_1.png" onclick="scene5_1()" />
+                    <img class="nav-img" src="assets/chlorophyll.png" onclick="scene6_1()" />
+                    <img class="nav-img" src="assets/thylakoid-membrane-thumbnail.png" onclick="scene8_1()" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
