@@ -735,11 +735,15 @@ function ldAnim5(played) {
 }
 function scene8_10() {
     $(".block-right").empty();
-    $(".block-right").append("<div class='sidebar'><p>The last stage in the electron's journey is a redox reaction between ferredoxin and NAD<sup>+</sup>, catalyzed by the ferredoxin-NADP<sup>+</sup> reductase enzyme.</p><button id='next' onclick='scene9_1()' style='margin-right: 10px;'>Continue</button><button id='replay' onclick='ldAnim6(true)'>Replay</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>The last stage in the electron's journey is a redox reaction between ferredoxin and NAD<sup>+</sup>, catalyzed by the ferredoxin-NADP<sup>+</sup> reductase enzyme. NADP<sup>+</sup> is the final electron carrier for photosynthesis, carrying away electrons in the form of NADPH.</p><button id='next' onclick='scene8_11()' style='margin-right: 10px;'>Next</button><button id='replay' onclick='ldAnim6(true)'>Replay</button></div>");
     ldAnim6(false)
 }
-async function ldAnim6() {
-    $("#frame").append("<img class='anim-component obj nadp' id='nadp' style='left: 434px; top: -40px;' src='assets/nadp.png' />")
+async function ldAnim6(played) {
+    if (played) {
+        $("#electron2").css("top", "121px"); $("#electron2").css("left", "380px"); $("#electron2").css("opacity", "100%");
+        $("#electron1").css("top", "139px"); $("#electron1").css("left", "347px"); $("#electron1").css("opacity", "100%");
+    }
+    $("#frame").append("<img class='anim-component obj nadp' id='nadp' style='left: 500px; top: 10px;' src='assets/nadp.png' />")
     anime({
         targets: "#nadp",
         top: "83px",
@@ -749,7 +753,7 @@ async function ldAnim6() {
         easing: "easeInCubic",
         complete: async function() {
             await sleep(600);
-            $("#frame").append("<img class='anim-component obj nadp nadph' id='nadph' style='left: 398px; top: 83px;' src='assets/nadph.png' />");
+            $("#frame").append("<img class='anim-component obj nadp nadph' id='nadph' style='left: 398px; top: 82px;' src='assets/nadph.png' />");
             anime({
                 targets: "#electron2",
                 top: "-22px",
@@ -766,7 +770,91 @@ async function ldAnim6() {
                 opacity: { value: "0", duration: 600, delay: 1000, easing: "easeInOutQuad" },
                 duration: 1000,
                 delay: 1000,
-                easing: "easeInCubic"
+                easing: "easeInCubic",
+                complete: function() {
+                    $(".nadp").remove(); $(".nadph").remove();
+                    anime({
+                        targets: "#electron1",
+                        top: "121px",
+                        left: "380px",
+                        duration: 600,
+                        delay: 300,
+                        easing: "easeInCubic",
+                        complete: async function() {
+                            await sleep(300);
+                            $("#frame").append("<img class='anim-component obj nadp' id='nadp' style='left: 500px; top: 10px;' src='assets/nadp.png' />")
+                            anime({
+                                targets: "#nadp",
+                                top: "83px",
+                                left: "399px",
+                                duration: 600,
+                                delay: 300,
+                                easing: "easeInCubic",
+                                complete: async function() {
+                                    await sleep(600);
+                                    $("#frame").append("<img class='anim-component obj nadp nadph' id='nadph' style='left: 398px; top: 82px;' src='assets/nadph.png' />");
+                                    anime({
+                                        targets: "#electron1",
+                                        top: "-22px",
+                                        left: "221px",
+                                        opacity: { value: "0", duration: 600, delay: 1000, easing: "easeInOutQuad" },
+                                        duration: 1000,
+                                        delay: 1000,
+                                        easing: "easeInCubic"
+                                    })
+                                    anime({
+                                        targets: ".nadp",
+                                        top: "-62px",
+                                        left: "240px",
+                                        opacity: { value: "0", duration: 600, delay: 1000, easing: "easeInOutQuad" },
+                                        duration: 1000,
+                                        delay: 1000,
+                                        easing: "easeInCubic",
+                                        complete: function() {
+                                            $(".nadp").remove(); $(".nadph").remove();
+                                        }
+                                    })
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+        }
+    })
+}
+
+function scene8_11() {
+    $(".block-right").empty();
+    $(".block-right").append("<div class='sidebar'><p>Over the course of the light-dependent reactions, protons are continuously pumped into the thylakoid lumen, both through the splitting of water into its component atoms, and through the movement of electrons. The ultimate goal of this process is simple - to establish a proton gradient across the membrane. Because of the mass of protons in the lumen, which repel each other, protons will be forced out of the lumen through the primary hole available - the ATP synthase enzyme. The movement of protons through ATP synthase powers the addition of an inorganic phosphate molecule onto an ADP molecule, forming fully charged ATP molecule.</p><button id='next' onclick='scene9_1()' style='margin-right: 10px;'>Continue</button><button id='replay' onclick='ldAnim7(true)'>Replay</button></div>");
+    ldAnim7(false)
+}
+function ldAnim7(played) {
+    if (played) {
+        $("#proton2").css("top", "325px"); $("#proton2").css("left", "288px"); 
+    }
+    anime({
+        targets: "#proton2",
+        top: "332px",
+        left: "459px",
+        duration: 400,
+        easing: "easeInCubic",
+        complete: function() {
+            anime({
+                targets: "#proton2",
+                top: "39px",
+                left: "459px",
+                duration: 400,
+                easing: "easeInCubic",
+                complete: function() {
+                    anime({
+                        targets: "#proton2",
+                        top: "39px",
+                        left: "359px",
+                        duration: 400,
+                        easing: "easeInCubic"
+                    })
+                }
             })
         }
     })
