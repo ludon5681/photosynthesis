@@ -130,7 +130,7 @@ function scene2_8() {
 }
 function scene2_9() {
     $(".block-right").empty();
-    $(".block-right").append("<div class='sidebar'><p>Let's zoom in on the plant's leaves, to take a close look at these how all this happens.</p><button id='continue' onclick='scene3_1()'>Continue</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>Let's zoom in on the plant's leaves, to take a closer look at these how all this happens.</p><button id='continue' onclick='scene3_1()'>Continue</button></div>");
 }
 
 function scene3_1() {
@@ -165,7 +165,7 @@ function scene3_4() {
 function scene3_5() {
     $(".block-right").empty();
     $("#frame").append("<img class='obj' style='top: 0; left: 0;' id='leaf' src='assets/leaf-diagram_3.png' />");
-    $(".block-right").append("<div class='sidebar'><p>Below the waxy cuticle is the leaf's upper epidermis, a layer of flattened, tightly packed cells that provide structural support to the cell and help to control water loss through stomata (though stomata are more common on the lower epidermis). It is usually only one cell thick, though in very hot or very cold conditions it may be thicker. </p><button id='next' onclick='scene3_6()'>Next</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>Below the waxy cuticle is the leaf's upper epidermis, a layer of flattened, tightly packed cells that provide structural support to the cell and help to control water loss through stomata (though stomata are more common on the lower epidermis). It is usually only one cell thick, though in plants that grow in very hot or very cold conditions it may be thicker. </p><button id='next' onclick='scene3_6()'>Next</button></div>");
 }
 function scene3_6() {
     $(".block-right").empty();
@@ -180,7 +180,7 @@ function scene3_7() {
 function scene3_8() {
     $(".block-right").empty();
     $("#frame").append("<img class='obj' style='top: 0; left: 0;' id='leaf' src='assets/leaf-diagram_6.png' />");
-    $(".block-right").append("<div class='sidebar'><p>Guard cells make up the cell's stomata, and are thus crucial to regulating gas exchange and water loss to the atmosphere. They are the only cells on the surface of the leaf that contain <b>chloroplasts</b>.</p><button id='next' onclick='scene3_9()'>Next</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>Guard cells make up the cell's stomata, and are thus crucial to regulating gas exchange and water loss to the atmosphere. They are the only cells on the epidermis of the leaf that contain <b>chloroplasts</b>.</p><button id='next' onclick='scene3_9()'>Next</button></div>");
 }
 function scene3_9() {
     $(".block-right").empty();
@@ -247,7 +247,7 @@ function scene4_3() {
             complete: addContinueEventListeners
         })
     }
-    $(".block-right").append("<div class='sidebar'><p>When the stoma is closed, the leaf has one less openings to the atmosphere, which makes it more difficult for it to take in <b>carbon dioxide</b> and release oxygen. However, this also helps to preserve water, especially when temperatures are very warm.<br><br>Click on the stoma again to open it!</p></div>");
+    $(".block-right").append("<div class='sidebar'><p>When the stoma is closed, the leaf has one less opening to the atmosphere, which makes it more difficult for it to take in <b>carbon dioxide</b> and release oxygen. However, this also helps to preserve water, especially when temperatures are very warm.<br><br>Click on the stoma again to open it!</p></div>");
     $("#frame").append("<img class='obj' style='top: 0; left: 0; opacity: 0;' id='close-stoma' src='assets/close-stoma.png' onclick='openStoma()' />");
     anime({
         targets: '#close-stoma',
@@ -329,12 +329,12 @@ function scene5_7() {
 function scene5_8() {
     $(".block-right").empty();
     $("#frame").append("<img class='obj' style='top: 0; left: 0;' id='leaf' src='assets/chloroplast_7.png' />");
-    $(".block-right").append("<div class='sidebar'><p>Thylakoids are arranged into stacks called grana (singular granum). Some thylakoids extend from one granum to a neighboring granum, connecting them. These are called lamellae. A <b>chloroplast</b> can have between 10 and 100 grana.</p><button id='next' onclick='scene5_9()'>Next</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>Thylakoids are arranged into stacks called <b>grana</b> (singular <b>granum</b>). Some thylakoids extend from one <b>granum</b> to a neighboring <b>granum</b>, connecting them. These are called <b>lamellae</b>. A <b>chloroplast</b> can have between 10 and 100 <b>grana</b>.</p><button id='next' onclick='scene5_9()'>Next</button></div>");
 }
 function scene5_9() {
     $(".block-right").empty();
     $("#frame").append("<img class='obj' style='top: 0; left: 0;' id='leaf' src='assets/chloroplast_8.png' />");
-    $(".block-right").append("<div class='sidebar'><p>As previously mentioned, <b>chloroplasts</b> contain their own ribosomes and DNA, which are suspended in the <b>stroma</b>. This is a significant piece of evidence for the endosymbiotic theory, which argues that <b>chloroplasts</b> and mitochondria were originally prokaryotes that once lived as independent organisms and were consumed by eukaryotic cells.</p><button id='next' onclick='scene6_1()'>Continue</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>As previously mentioned, <b>chloroplasts</b> contain their own ribosomes and DNA, which are suspended in the <b>stroma</b>. This is a significant piece of evidence for the <b>endosymbiotic theory</b> of <b>chloroplast</b> and mitochondrial origin, which argues that <b>chloroplasts</b> and mitochondria were originally prokaryotes that once lived as independent organisms and were consumed by eukaryotic cells.</p><button id='next' onclick='scene6_1()'>Continue</button></div>");
 }
 
 function scene6_1() {
@@ -359,7 +359,7 @@ function scene6_2() {
     })
 }
 function scene6_3() {
-    $(".block-right").append("<div class='sidebar'><p>Inside the thalykoids are light-absorbing pigments. There are a number of these, but the most common are the <b>chlorophylls</b>: <b>chlorophyll</b> A and <b>chlorophyll</b> B. These pigments are green, because they absorb nearly all wavelengths of light except green.</p><button id='next' onclick='scene6_4()'>Next</button></div>")
+    $(".block-right").append("<div class='sidebar'><p>Inside the thylakoids are light-absorbing pigments. There are a number of these, but the most common are the <b>chlorophylls</b>: <b>chlorophyll</b> A and <b>chlorophyll</b> B. These pigments are green, because they absorb nearly all wavelengths of light except green.</p><button id='next' onclick='scene6_4()'>Next</button></div>")
 }
 function scene6_4() {
     $(".block-right").empty();
@@ -422,7 +422,7 @@ function scene8_2() {
     })
 }
 function scene8_3() {
-    $(".block-right").append("<div class='sidebar'><p>The <b>thylakoid membrane</b>, like nearly all cellular membranes, is composed of a phospholipid bilayer. As you may recall from studying the fluid mosaic model of the cell membrane, these bilayers have many components - such as proteins, lipids, and many others - that help to perform many functions integral to the functioning of the cell. That is no different across the <b>thylakoid membrane</b>, which additionally contains a variety of molecular machinery used in the process of the <b>light-dependent reactions</b> of photosynthesis. There are two different light-dependent reaction cycles: first, there is <b>non-cyclic photophosphorylation</b>, which we will detail now, and then there is <b>cyclic photophosphorylation</b>, which will be described afterwards. The main difference between the two is that in non-cyclic <b>photophosphorylation</b>, electrons are produced by splitting in a process called photolysis and accepted by <b>NADP<sup>+</sup></b>, and in cyclic phosphorylation, they simply move in a cycle.</p><button id='next' onclick='scene8_4()'>Next</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>The <b>thylakoid membrane</b>, like nearly all cellular membranes, is composed of a phospholipid bilayer. As you may recall from studying the fluid mosaic model of the cell membrane, these bilayers have many components - such as proteins, lipids, and many others - that help to perform many functions integral to the functioning of the cell. That is no different across the <b>thylakoid membrane</b>, which additionally contains a variety of molecular machinery used in the process of the <b>light-dependent reactions</b> of photosynthesis. There are two different types of light-dependent reactions: first, there is <b>non-cyclic photophosphorylation</b>, which we will detail now, and then there is <b>cyclic photophosphorylation</b>, which will be described afterwards. The main difference between the two is that in non-cyclic <b>photophosphorylation</b>, electrons are produced by splitting water in a process called photolysis and ultimately accepted by <b>NADP<sup>+</sup></b>, while in cyclic phosphorylation, they simply move in a cycle around the electron acceptors of the membrane.</p><button id='next' onclick='scene8_4()'>Next</button></div>");
 }
 function scene8_4() {
     $(".block-right").empty();
@@ -518,7 +518,7 @@ function ldAnim1() {
 }
 function scene8_6() {
     $(".block-right").empty();
-    $(".block-right").append("<div class='sidebar'><p>While the electrons pass to plastoquinone, the plant cell will split a water molecule inside the thalykoid lumen in an endergonic reaction, producing 2 protons and 2 electrons (from the hydrogen atoms), and 1 oxygen atom. The new electrons will enter <b>photosystem I</b> to replace the electrons that passed to plastoquinone. The oxygen atom will bond with other oxygen atoms produced by the light-dependent reaction to form oxygen gas (O<sub>2</sub>), and passively diffuse out of the <b>chloroplast</b>. The hydrogen atoms, having lost their electrons, will become protons, contributing to the <b>proton gradient</b> that is being established between the <b>thylakoid lumen</b> and the <b>stroma</b>.</p><button id='next' onclick='scene8_7()' style='margin-right: 10px;'>Next</button><button id='replay' onclick='ldAnim2(true)'>Replay</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>While the electrons pass to plastoquinone, the plant cell will split a water molecule inside the thylakoid lumen in an endergonic reaction, producing 2 protons and 2 electrons (from the hydrogen atoms), and 1 oxygen atom. The new electrons will enter <b>photosystem I</b> to replace the electrons that passed to plastoquinone. The oxygen atom will bond with other oxygen atoms produced by the light-dependent reaction to form oxygen gas (O<sub>2</sub>), and passively diffuse out of the <b>chloroplast</b>. The hydrogen atoms, having lost their electrons, will become protons, contributing to the <b>proton gradient</b> that is being established between the <b>thylakoid lumen</b> and the <b>stroma</b>.</p><button id='next' onclick='scene8_7()' style='margin-right: 10px;'>Next</button><button id='replay' onclick='ldAnim2(true)'>Replay</button></div>");
     ldAnim2(false)
 }
 function ldAnim2(played) {
@@ -626,7 +626,7 @@ function ldAnim3(played) {
 }
 function scene8_8() {
     $(".block-right").empty();
-    $(".block-right").append("<div class='sidebar'><p>One of the electrons is then passed, in another endergonic redox reaction, to the plastocyanin molecule, oxidizing cytochrome b,sub>6</sub>f and reducing plastocyanin. From this point on, each electron carrier can only hold one electron at a time. The plastocyanin then passes one of those electrons up to <b>photosystem I</b>, in another endergonic redox reaction. This frees it up to take the second electron from the cytochrome b<sub>6</sub>f complex. Why is <b>photosystem I</b> numbered I even though it happens later? Because it was discovered first, and biologists are bad at naming things, that's why.</p><button id='next' onclick='scene8_9()' style='margin-right: 10px;'>Next</button><button id='replay' onclick='ldAnim4(true)'>Replay</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>One of the electrons is then passed, in another endergonic redox reaction, to the plastocyanin molecule, oxidizing cytochrome b<sub>6</sub>f and reducing plastocyanin. From this point on, each electron carrier can only hold one electron at a time. The plastocyanin then passes one of those electrons up to <b>photosystem I</b>, in another endergonic redox reaction. This frees it up to take the second electron from the cytochrome b<sub>6</sub>f complex. Why is <b>photosystem I</b> numbered I even though it happens later? Because it was discovered first, and biologists are bad at naming things, that's why.</p><button id='next' onclick='scene8_9()' style='margin-right: 10px;'>Next</button><button id='replay' onclick='ldAnim4(true)'>Replay</button></div>");
     ldAnim4(false)
 }
 function ldAnim4(played) {
@@ -825,7 +825,7 @@ async function ldAnim6(played) {
 
 function scene8_11() {
     $(".block-right").empty();
-    $(".block-right").append("<div class='sidebar'><p>Over the course of the <b>light-dependent reactions</b>, protons are continuously pumped into the <b>thylakoid lumen</b>, both through the splitting of water into its component atoms, and through the movement of electrons. The ultimate goal of this process is simple - to establish a <b>proton gradient</b> across the membrane. Because of the mass of protons in the lumen, which repel each other, protons will be forced out of the lumen through the primary hole available - the <b>ATP synthase</b> enzyme. The movement of protons through <b>ATP synthase</b> powers the addition of an inorganic phosphate molecule onto an ADP molecule, forming fully charged <b>ATP</b> molecule. This is called photophosphorylation.</p><button id='next' onclick='scene8_12()' style='margin-right: 10px;'>Next</button><button id='replay' onclick='ldAnim7(true)'>Replay</button></div>");
+    $(".block-right").append("<div class='sidebar'><p>Over the course of the <b>light-dependent reactions</b>, protons are continuously pumped into the <b>thylakoid lumen</b>, both through the splitting of water into its component atoms, and through the movement of electrons. The ultimate goal of this process is simple - to establish a <b>proton gradient</b> across the membrane. Because of the mass of protons in the lumen, which repel each other, protons will be forced out of the lumen through the primary hole available - the <b>ATP synthase</b> enzyme. The movement of protons through <b>ATP synthase</b> powers the addition of an inorganic phosphate molecule onto an ADP molecule, forming fully charged <b>ATP</b> molecule. This is called photophosphorylation, and is an endergonic reaction.</p><button id='next' onclick='scene8_12()' style='margin-right: 10px;'>Next</button><button id='replay' onclick='ldAnim7(true)'>Replay</button></div>");
     ldAnim7(false);
 }
 function ldAnim7(played) {
@@ -1107,7 +1107,7 @@ function scene9_5() {
         }
     })
     $(".block-right").empty();
-    $(".block-right").append("<div class='sidebar'><p>The ultimate goal for that 3-phosphoglycerate is to turn it into <b>glyceraldehyde 3-phosphate</b> (G3P), a 3-carbon sugar that can be converted into <b>glucose</b>. To achieve this, the plant must remove the oxygen anion on the far left side and replace it with a hydrogen atom. This is done in two steps, the first being a <b>phosphorylation</b> (an <b>anabolic</b>, <b>endergonic</b> reaction) using ATP. This reaction will produce <b>1,3-bisphosphoglycerate</b> (<b>3-phosphoglycerate</b> with an extra phosplate on the end). It will also produde ADP and inorganic phosphate (P<sub>i</sub>), which will be sent back to the light-dependent reactions to be converted back to ATP.<br><br>Drag the ATP onto the glyceraldehyde 3-phosphate to perform the reaction!</p></div>");
+    $(".block-right").append("<div class='sidebar'><p>The ultimate goal for that 3-phosphoglycerate is to turn it into <b>glyceraldehyde 3-phosphate</b> (G3P), a 3-carbon sugar that can be converted into <b>glucose</b>. To achieve this, the plant must remove the oxygen anion on the far left side and replace it with a hydrogen atom. This is done in two steps, the first being a <b>phosphorylation</b> (an <b>anabolic</b>, <b>endergonic</b> reaction) using ATP. This reaction will produce <b>1,3-bisphosphoglycerate</b> (<b>3-phosphoglycerate</b> with an extra phosphate on the end). It will also produde ADP and inorganic phosphate (P<sub>i</sub>), which will be sent back to the light-dependent reactions to be converted back to ATP.<br><br>Drag the ATP onto the glyceraldehyde 3-phosphate to perform the reaction!</p></div>");
 }
 function scene9_6() {
     anime({
@@ -1189,7 +1189,7 @@ function scene9_8() {
     })
     
     $(".block-right").empty();
-    $(".block-right").append("<div class='sidebar'><p><b>G3P</b> goes through a complex set of reactions that are beyond the scope of this explanation, and is ultimately regenerated back to a 5-carbon compound called <b>ribulose 5-phosphate</b>. The last step now is to phosphorylate the <b>ribulose 5-phosphate</b> into <b>ribulose 1,5-bisphosphate</b> (<b>RuBP</b>) using ATP in an anabolic, endergonic reaction that will produce <b>RuBP</b>, ADP, and P<sub>i</sub>. You know the drill by now - drag the ATP molecule onto the <b>ribulose 5-phosphate</b> to start the reaction!</p></div>");
+    $(".block-right").append("<div class='sidebar'><p><b>G3P</b> goes through a complex set of reactions that are beyond the scope of this explanation, and is ultimately regenerated back to a 5-carbon compound called <b>ribulose 5-phosphate</b>. The last step now is to phosphorylate the <b>ribulose 5-phosphate</b> into <b>ribulose 1,5-bisphosphate</b> (<b>RuBP</b>) using ATP in an anabolic, endergonic reaction that will produce <b>RuBP</b> and ADP. You know the drill by now - drag the ATP molecule onto the <b>ribulose 5-phosphate</b> to start the reaction!</p></div>");
 }
 function scene9_9() {
     anime({
